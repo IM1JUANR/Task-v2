@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors()); // Permite que Vue (frontend) pueda consumir la API
 app.use(express.json()); // Para procesar datos en formato JSON
 
+const userRoutes = require("./routes/userRoutes");
+app.use("/api/users",userRoutes);
+
 // 4. Ruta de prueba
 app.get("/ping", (req, res) => {
   res.json({ message: "pong" });
