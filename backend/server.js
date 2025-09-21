@@ -2,6 +2,7 @@
 const express = require("express"); // Framework para el servidor
 const mongoose = require("mongoose"); // Para conectarnos a MongoDB
 const cors = require("cors"); // Para permitir conexiones desde el frontend
+const bcrypt = require("bcrypt")
 require("dotenv").config(); // Para leer variables de entorno desde .env
 
 // 2. Creamos la aplicación Express
